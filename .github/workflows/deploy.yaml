@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          path: /home/seguser/hng/fastapi-book-project
 
       - name: Install dependencies
         run: |
@@ -19,7 +17,6 @@ jobs:
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-        working-directory: /home/seguser/hng/fastapi-book-project
 
       - name: Deploy Application
         run: |
